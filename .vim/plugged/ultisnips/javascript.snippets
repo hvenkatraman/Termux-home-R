@@ -1,0 +1,57 @@
+snippet route "Express Route"
+app.${1|get,post,put,delete|}('/${2:route}', (req, res) => {
+    res.${3|send,json|}('${4:response}');
+});
+endsnippet
+
+
+snippet rfc "React Functional Component"
+const ${1:ComponentName} = ({ ${2:props} }) => {
+    return (
+        <div>
+            ${0}
+        </div>
+    );
+};
+export default ${1:ComponentName};
+endsnippet
+
+
+snippet us "useState Hook"
+const [${1:state}, set${1/(.*)/\u\1/}] = useState(${2:initialValue});
+${0}
+endsnippet
+
+
+snippet ue "useEffect Hook"
+useEffect(() => {
+    ${1:// Effect code here}
+    return () => {
+        ${2:// Cleanup code here}
+    };
+}, [${3:dependencies}]);
+${0}
+endsnippet
+
+snippet rfcus "React Functional Component with useState and useEffect"
+import React, { useState, useEffect } from 'react';
+
+const ${1:ComponentName} = () => {
+    const [${2:state}, set${2/(.*)/\u\1/}] = useState(${3:initialValue});
+
+    useEffect(() => {
+        ${4:// Effect code}
+        return () => {
+            ${5:// Cleanup code}
+        };
+    }, [${6:dependencies}]);
+
+    return (
+        <div>
+            ${0}
+        </div>
+    );
+};
+
+export default ${1:ComponentName};
+endsnippet

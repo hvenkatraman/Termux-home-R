@@ -1,0 +1,25 @@
+# Ignore all files and folders by default
+*
+
+# Explicitly include .gitignore so it works
+!.gitignore
+
+# Allow specific files
+!.vimrc
+!.zshrc
+!.zshenv
+!.bashrc
+!.yarnrc
+!.profile
+!.gitconfig
+!.npmrc
+
+# Allow specific folders and their contents
+!.config/
+!.vim/
+!.oh-my-zsh/
+
+
+# Ensure everything inside these folders is tracked
+!.config/**
+!.vim/**

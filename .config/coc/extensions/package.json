@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "coc-snippets": ">=3.1.10",
+    "coc-python": ">=1.2.13",
+    "coc-json": ">=1.9.2",
+    "coc-tsserver": ">=2.2.0"
+  }
+}
