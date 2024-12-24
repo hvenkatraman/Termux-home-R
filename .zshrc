@@ -131,6 +131,7 @@ alias cdlweb="cd /data/data/com.termux/files/home/learn/lweb"
 alias cdlcss='cd /data/data/com.termux/files/home/learn/lweb/lcss'
 alias cdlhtml='cd /data/data/com.termux/files/home/learn/lweb/lhtml'
 alias cdlejs='cd /data/data/com.termux/files/home/learn/lweb/lejs'
+alias nvcfg="cd /data/data/com.termux/files/home/.config/nvim/"
 
 alias cdvimsnippets='/data/data/com.termux/files/home/.vim/plugged/vim-snippets/snippets'
 alias cdvimsnippetsjs='/data/data/com.termux/files/home/.vim/plugged/vim-snippets/snippets/javascript'
@@ -144,12 +145,12 @@ alias cdsemulated='cd /storage/emulated/0/'
 # All my rc files shortcuts
 
 
+alias nvimrc="vim /data/data/com.termux/files/home/.config/nvim/init.lua"
 alias vzshrc="vim /data/data/com.termux/files/home/.zshrc"
 alias vifmzshrc="vifm /data/data/com.termux/files/home/.zshrc"
 alias szshrc="source /data/data/com.termux/files/home/.zshrc"
 alias vimrc="vim /data/data/com.termux/files/home/.vimrc"
 #alias svimrc="source /data/data/com.termux/files/home/.vimrc"
-alias nvcfg="vim /data/data/com.termux/files/home/.config/nvim/init.lua"
 
 
 alias nzshrc="nano /data/data/com.termux/files/home/.zshrc"

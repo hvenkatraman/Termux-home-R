@@ -25,10 +25,36 @@ syntax on
 
 
 call plug#begin('~/.vim/plugged')
+"For .html.js .jsx .css.ejs .php
+
 Plug 'mattn/emmet-vim'  " Example plugin
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'prettier/vim-prettier', {
+      \ 'do': 'yarn install --frozen-lockfile --production',
+      \ 'branch': 'release/0.x'
+    \ }
+
+
+
+"For python .py
+
+" Python-related plugins
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'davidhalter/jedi-vim'
+Plug 'dense-analysis/ale'
+
+" General plugins
+Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'Vimjas/vim-python-pep8-indent'
+
+"For Vim-LSP
+
+Plug 'prabirshrestha/vim-lsp'
 
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -65,5 +91,34 @@ autocmd BufRead,BufNewFile *.xml set filetype=xml
 
 
 let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/ultisnips/snippets']
+
+" Map Space to the leader key
+let mapleader=" "
+
+" Map <Leader>e to toggle NERDTree
+nnoremap <leader>e :NERDTreeToggle<CR>
+
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
+" Key bindings
+nmap <leader>p :Prettier<CR>
+
+"LSP Configurations & keymaps
+"
+" au User lsp_setup call lsp#register_server({
+"     \ 'name': 'pylsp',
+"     \ 'cmd': {server_info -> ['pylsp']},
+"     \ 'allowlist': ['python']
+" \ }
+
+" nnoremap <leader>dd :LspDocumentDiagnostics<CR>
+" nnoremap <leader>rn :LspRename<CR>
+" nnoremap <leader>gd :LspDefinition<CR>
+" nnoremap <leader>gi :LspImplementation<CR>
+" nnoremap <leader>gr :LspReferences<CR>)
+
+" let g:lsp_format_sync_timeout = 1000
+" autocmd! BufWritePre * LspDocumentFormatSync
 
 
