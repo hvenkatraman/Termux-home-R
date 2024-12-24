@@ -52,15 +52,29 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'Vimjas/vim-python-pep8-indent'
 
+
+
+Plug 'junegunn/vim-plug'
+Plug 'StanAngeloff/php.vim'
+Plug 'vim-php/phpctags'
+Plug 'sheerun/vim-polyglot'
+Plug 'jwalton512/vim-blade'
+Plug 'neoclide/coc.nvim'
+call plug#end()
+
+let g:php_version_id = 70300
+
+" Coc.nvim configuration
+" Add your Coc.nvim configuration here
+
+
+
 "For Vim-LSP
 
-Plug 'prabirshrestha/vim-lsp'
+" Plug 'prabirshrestha/vim-lsp'
 
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-
-call plug#end()
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Treat .ejs files as HTML for Emmet
 autocmd BufRead,BufNewFile *.ejs set filetype=html
