@@ -27,7 +27,7 @@ syntax on
 call plug#begin('~/.vim/plugged')
 "For .html.js .jsx .css.ejs .php
 
-Plug 'mattn/emmet-vim'  " Example plugin
+Plug 'mattn/emmet-vim'  
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -53,14 +53,56 @@ Plug 'tpope/vim-commentary'
 Plug 'Vimjas/vim-python-pep8-indent'
 
 
+"Php tags & misc
 
-Plug 'junegunn/vim-plug'
 Plug 'StanAngeloff/php.vim'
 Plug 'vim-php/phpctags'
 Plug 'sheerun/vim-polyglot'
 Plug 'jwalton512/vim-blade'
 Plug 'neoclide/coc.nvim'
+
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
+
+
+
+"autocomplete plug
+
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
+
 call plug#end()
+
+
+
+
+
+"Colour theme settings
+
+" Plug 'morhetz/gruvbox'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+
+" call plug#end()
+
+" syntax enable
+" set background=dark
+" colorscheme gruvbox " Change this to your preferred theme
+
+
+" syntax enable
+" set background=dark " or light
+" colorscheme solarized
+
+
+" syntax enable
+" colorscheme dracula
+
+
+
+"call plug#end()
+
 
 let g:php_version_id = 70300
 
@@ -135,4 +177,8 @@ nmap <leader>p :Prettier<CR>
 " let g:lsp_format_sync_timeout = 1000
 " autocmd! BufWritePre * LspDocumentFormatSync
 
-
+" Customize coc.nvim colors
+hi Pmenu guibg=#3c3836 guifg=#ebdbb2
+hi PmenuSel guibg=#504945 guifg=#fbf1c7
+hi PmenuSbar guibg=#3c3836
+hi PmenuThumb guibg=#504945
