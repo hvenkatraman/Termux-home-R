@@ -63,14 +63,19 @@ Plug 'neoclide/coc.nvim'
 
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 
 
+Plug 'hrsh7th/vim-vsnip'
+
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 "autocomplete plug
 
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 
 call plug#end()
 
@@ -148,6 +153,16 @@ autocmd BufRead,BufNewFile *.xml set filetype=xml
 
 let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/ultisnips/snippets']
 
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="horizontal"
+
+
+
 " Map Space to the leader key
 let mapleader=" "
 
@@ -182,3 +197,14 @@ hi Pmenu guibg=#3c3836 guifg=#ebdbb2
 hi PmenuSel guibg=#504945 guifg=#fbf1c7
 hi PmenuSbar guibg=#3c3836
 hi PmenuThumb guibg=#504945
+
+" Files
+nnoremap <silent> <leader>f :Files<CR>
+" Buffers
+nnoremap <silent> <leader>b :Buffers<CR>
+" Recently opened files
+nnoremap <silent> <leader>r :History<CR>
+" Help tags
+nnoremap <silent> <leader>h :Helptags<CR>
+" Grep with Ag
+nnoremap <silent> <leader>g :Rg<CR>

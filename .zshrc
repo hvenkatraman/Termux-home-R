@@ -135,6 +135,7 @@ alias nvcfg="cd /data/data/com.termux/files/home/.config/nvim/"
 
 alias cdvimsnippets='/data/data/com.termux/files/home/.vim/plugged/vim-snippets/snippets'
 alias cdvimsnippetsjs='/data/data/com.termux/files/home/.vim/plugged/vim-snippets/snippets/javascript'
+alias cdvsnip="cd /data/data/com.termux/files/home/.vim/plugged/vim-vsnip/snippets"
 
 alias cdlpy="cd /data/data/com.termux/files/home/learn/lpython"
 alias cdlnotes="cd /data/data/com.termux/files/home/learn/lnotes"
