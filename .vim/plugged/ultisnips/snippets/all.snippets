@@ -1,21 +1,28 @@
-snippet q "quotes"
-"$1"
+snippet " "double quotes"
+	"$1"
+endsnippet
+snippet ' "single quotes"
+	'$1'
+endsnippet
+snippet ( "()"
+	($1)
+endsnippet
+snippet { "{}"
+	{$1}
 endsnippet
 
-snippet csll "console.log"
-console.log("$1");
-endsnippet
-
-snippet r "require"                
-require("$1");
-endsnippet
-
-snippet rr "require react"
-require("react");
-endsnippet
-
-snippet rm "require mongoose"
-require("mongoose");                        
+snippet [ "[]"
+	[$1]
 endsnippet
 
 
+snippet initsnip"initialize snippet"
+	snippet name$1 "description$2"
+		$3
+	endsnippet
+endsnippet
+snippet *l "*line"
+	*****************************************
+endsnippet
+	
+	

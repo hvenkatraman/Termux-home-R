@@ -1,0 +1,101 @@
+snippet crr "require react" 
+	const react=require("react");
+endsnippet
+snippet crm "require mongoose" 
+	const mongoose=require("mongoose");
+endsnippet
+snippet cre "require express" 
+	const express=require("express");
+endsnippet
+
+snippet crcp "require cookie-parser" 
+	const cookieParser=require("cookie-parser");
+endsnippet
+
+snippet cr "require react" 
+	const $1=require("$2");
+endsnippet
+
+snippet capex "app=express()" 
+	const app=express();
+endsnippet
+	
+snippet cexr "defining express router" 
+	const $1=express.Router();
+endsnippet
+
+snippet mschema "Mongoose schema"
+	const emp$1Schema=mongoose.Schema({
+	id$2:Number$3,
+	name$4:String$5,
+	email$6:String$7,
+	$8
+	});
+endsnippet
+
+snippet odm "mongoose object data model"
+	const Emp$1=mongoose.model(emp$2,emp$3Schema);
+endsnippet
+	
+snippet moncon "mongodb connection"
+	const uri="mongodb://localhost:27017/testdb"
+	mongoose.connect(uri).then(()=>{console.log("Mongodb database connection established")}).catch((error)=>{console.log(error)});
+endsnippet
+
+	
+snippet aget "app.get" 
+	app.get("/$1",(req,res,next)=>{res.status(200$2).json({"Message":data$3})});
+endsnippet
+snippet apost "app.post" 
+	app.post("/$1",(req,res,next)=>{res.status(201$2).json({"Message":data$3})});
+endsnippet
+
+snippet aput "app.put" 
+	app.put("/$1",(req,res,next)=>{res.status(201$2).json({"Message":data$3})});
+endsnippet
+
+snippet adelete "app.delete" 
+	app.delete("/$1",(req,res,next)=>{res.status(200$2).json({"Message":data$3})});
+endsnippet
+
+snippet exsrvr "Express server"
+	app.listen(port,(req,res,next)=>{console.log("$1server started sucessfully at port:${port}"$2)});
+endsnippet
+
+snippet exsrvrd "Express server"
+	app.listen(port,(data)=>{console.log(data)});
+endsnippet
+snippet portno "define port"
+	const port=process.env.PORT||$1;
+endsnippet
+snippet tryncatch "try and catch block"
+	try{
+		$1
+
+	}catch(error){
+	res.status(401).json({"Message":error});
+
+	}
+endsnippet
+
+snippet afuncr "Arrow fuction(req,res,next)"
+	(req,res,next)=>
+	{	
+		res.status(201).json({"message":data});
+	}
+endsnippet
+
+snippet afuncl "Arrow fuction(req,res,next)"
+	(req,res,next)=>
+	{	
+	    console.log("Req contents sent");
+		res.status(201).json({"message":data});
+	}
+endsnippet
+	
+	
+
+
+
+	
+	
