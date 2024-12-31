@@ -1,0 +1,17 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  }
+}
+
+{
+  "tsserver.enable": true,
+  "tsserver.formatOnType": true,
+  "javascript.validate.enable": true,
+  "typescript.suggest.autoImports": true
+}

@@ -1,98 +1,382 @@
-snippet crr "require react" 
-	const react=require("react");
+snippet crrct "require react" 
+const react=require("react");
 endsnippet
+
+
+snippet crex "require express" 
+const express=require("express");
+endsnippet
+
+
 snippet crm "require mongoose" 
-	const mongoose=require("mongoose");
-endsnippet
-snippet cre "require express" 
-	const express=require("express");
-endsnippet
+const mongoose=require("mongoose");
 
+endsnippet
 snippet crcp "require cookie-parser" 
-	const cookieParser=require("cookie-parser");
-endsnippet
+const cookieParser=require("cookie-parser");
 
-snippet cr "require react" 
-	const $1=require("$2");
+endsnippet
+snippet cr "require " 
+const $1=require("$2");
+
 endsnippet
 
 snippet capex "app=express()" 
-	const app=express();
+const app=express();
+
 endsnippet
 	
 snippet cexr "defining express router" 
-	const $1=express.Router();
+const $1=express.Router();
+$2
+
 endsnippet
 
+snippet mwjson "Middleware for json"
+app.use(express.json());
+$1
+endsnippet
+
+snippet clog "console output;"
+console.log("$1");
+$2
+
+endsnippet
+snippet clogv "console output with string & value"
+console.log($1);
+$2
+
+endsnippet
+snippet clogsv"console output string & value in one"
+console.log("$1",$2);
+$3
+
+endsnippet
 snippet mschema "Mongoose schema"
-	const emp$1Schema=mongoose.Schema({
+const emp$1Schema=mongoose.Schema({
 	id$2:Number$3,
 	name$4:String$5,
 	email$6:String$7,
 	$8
-	});
-endsnippet
+});
 
+endsnippet
 snippet odm "mongoose object data model"
-	const Emp$1=mongoose.model(emp$2,emp$3Schema);
+const Emp$1=mongoose.model("emp$2",emp$3Schema);
+
 endsnippet
 	
 snippet moncon "mongodb connection"
-	const uri="mongodb://localhost:27017/testdb"
-	mongoose.connect(uri).then(()=>{console.log("Mongodb database connection established")}).catch((error)=>{console.log(error)});
+const uri="mongodb://localhost:27017/testdb"
+
+mongoose.connect(uri)
+.then(()=>{console.log("Mongodb database connection established")})
+.catch((error)=>{console.log(error)});
+
+
+endsnippet
+	
+snippet aget "app.get" 
+app.get("/$1",(req,res,next)=>
+{
+	res.status(200$2).json({"Message":data$3})
+});
+
+endsnippet
+
+snippet agettnc "app.get try & catch" 
+
+app.get("/$1",(req,res,next)=>
+{
+try{
+
+	
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+snippet agettncj "app.get try & catch json" 
+app.get("/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).json({'message',data$1});
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+
+snippet agettncr "app.get try & catch render" 
+app.get("/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).render("$1.ejs");
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+snippet aposttnc "app.post try & catch" 
+
+app.post("/$1",(req,res,next)=>
+{
+try{
+
+		}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+snippet aposttncj"app.post try & catch json" 
+app.post("/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).json({'message',data$1});
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+
+snippet aposttncr "app.post try & catch render" 
+app.post("/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).render("Data added sucessfully");
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+
+snippet aputtnc "app.put try & catch" 
+
+app.put("/$1",(req,res,next)=>
+{
+try{
+
+		}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+snippet aputtncj"app.post try & catch json" 
+app.put("/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).json({'message',data$1});
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+
+snippet aputtncr "app.post try & catch render" 
+app.put("/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).render("Editing document sucessful");
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+
+snippet adeletetnc "app.delete try & catch" 
+
+app.delete("/$1",(req,res,next)=>
+{
+try{
+
+		}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+snippet adeletetncj"app.delete try & catch json" 
+app.delete"/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).json({'message',data$1});
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+
+snippet adeletetncr "app.delete try & catch render" 
+app.delete("/$1",(req,res,next)=>
+{
+try{
+
+	res.status(201).send(Deletion sucessful);
+
+	}catch(error)
+	{
+		console.log(error.measage);
+	}
+});
+endsnippet
+
+snippet apost "app.post" 
+app.post("/$1",(req,res,next)=>
+{   
+	res.status(201$2).json({"Message":data$3})
+});
+
+endsnippet
+snippet reqbodyo "Request Body object grabbing"
+	const rdata$1=req.body
+$2
+endsnippet
+
+snippet reqbodyd "Request Body destuctured grabbing"
+const {	A$1:a$2,B$3:b$4,C$5:c$6}=req.body
+$7
+
+endsnippet
+
+
+snippet reqbodydi "Request Body destuctured grabbing"
+const {a$1,b$2,c$3}=req.body
+$7
+
+endsnippet
+snippet reqbodyo "Request Body grabbing"
+const bodyData$1=req.body
+$2
+endsnippet
+snippet requeryd "Request Query destuctured grabbing"
+const {	A$1:a$2,B$3:b$4,C$5:c$6}=req.query
+$7
+
+endsnippet
+
+snippet reqquerydi "Request Query destuctured grabbing"
+const {a$1,b$2,c$3}=req.query
+$7
+endsnippet
+
+snippet reqqueryo "Request Query destuctured grabbing"
+const queryData=req.query
+$7
+endsnippet
+
+
+snippet reqparamso "Request Params grabbing"
+const paramsData$1=req.params
+$2
+endsnippet
+snippet reqparamsd "Request Params destuctured grabbing"
+const {	A$1:a$2,B$3:b$4,C$5:c$6}=req.params
+$7
+
+endsnippet
+
+snippet reqparamsdi "Request Params destuctured grabbing"
+const {a$1,b$2,c$3}=req.params
+$7
 endsnippet
 
 	
-snippet aget "app.get" 
-	app.get("/$1",(req,res,next)=>{res.status(200$2).json({"Message":data$3})});
-endsnippet
-snippet apost "app.post" 
-	app.post("/$1",(req,res,next)=>{res.status(201$2).json({"Message":data$3})});
-endsnippet
+snippet iodm "odm instance"
+const emp=new Emp({"id":"id","name":"name","email:"Email"});
 
+endsnippet
+	
 snippet aput "app.put" 
-	app.put("/$1",(req,res,next)=>{res.status(201$2).json({"Message":data$3})});
-endsnippet
+app.put("/$1",(req,res,next)=>
+{
+	res.status(201$2).json({"Message":data$3})
+});
 
+endsnippet
 snippet adelete "app.delete" 
-	app.delete("/$1",(req,res,next)=>{res.status(200$2).json({"Message":data$3})});
+app.delete("/$1",(req,res,next)=>
+{
+	res.status(200$2).json({"Message":data$3})
+});
+
 endsnippet
 
 snippet exsrvr "Express server"
-	app.listen(port,(req,res,next)=>{console.log("$1server started sucessfully at port:${port}"$2)});
-endsnippet
+app.listen(port,(req,res,next)=>{console.log("$1server started sucessfully at port:${port}"$2)});
 
+endsnippet
 snippet exsrvrd "Express server"
-	app.listen(port,(data)=>{console.log(data)});
+app.listen(port,(data)=>{console.log(data)});
+
 endsnippet
 snippet portno "define port"
-	const port=process.env.PORT||$1;
+const port=process.envPORT||$1;
+
 endsnippet
 snippet tryncatch "try and catch block"
-	try{
-		$1
+try{
+$1
 
-	}catch(error){
-	res.status(401).json({"Message":error});
+}catch(error)
+{
 
-	}
+res.status(401).json({"Message":error});
+
+}
+
+endsnippet
+
+snippet afunc "Arrow fuction()=>"
+()=>{console.log("$1");}
+
+endsnippet
+snippet afuncd "Arrow fuction(req,res,next)"
+(req,res,next$1)=>
+{	
+	res.status(201).json({"message$1":data$2});
+}
+
 endsnippet
 
 snippet afuncr "Arrow fuction(req,res,next)"
-	(req,res,next)=>
-	{	
-		res.status(201).json({"message":data});
-	}
-endsnippet
+(req,res,next$1)=>
+{	
+	res.status(201).json({"message$1":data$2});
+}
 
 snippet afuncl "Arrow fuction(req,res,next)"
-	(req,res,next)=>
-	{	
-	    console.log("Req contents sent");
-		res.status(201).json({"message":data});
-	}
+(req,res,next)=>
+{	
+	console.log("Req contents sent$1");
+	res.status(201).json({"message$2":data$3});
+}
 endsnippet
-	
+
 	
 
 

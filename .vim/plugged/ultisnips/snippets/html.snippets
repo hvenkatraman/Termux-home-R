@@ -1,0 +1,99 @@
+snippet html-t "HTML5 Boilerplate"
+<!DOCTYPE html>
+<html lang="${1:en}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${2:Document}</title>
+    ${3:<!-- Add stylesheets or meta tags here -->}
+</head>
+<body>
+    ${0:<!-- Content goes here -->}
+</body>
+</html>
+endsnippet
+
+snippet link-t "Link Tag"
+<link rel="${1:stylesheet}" href="${2:style.css}">
+endsnippet
+
+
+snippet img-t "Image Tag"
+<img src="${1:image.jpg}" alt="${2:description}" ${3:width="${4:300}" height="${5:200}"} />
+endsnippet
+
+snippet script-t "Script Tag"
+<script src="${1:script.js}" ${2:defer}></script>
+endsnippet
+
+snippet divc "Div with Class"
+<div class="${1:container}">
+    ${0:<!-- Content goes here -->}
+</div>
+endsnippet
+
+snippet a-t "Anchor Tag"
+<a href="${1:#}" ${2:target="_blank"}>${3:Link Text}</a>
+endsnippet
+
+snippet table-t "Table Template"
+<table>
+    <thead>
+        <tr>
+            <th>${1:Header 1}</th>
+            <th>${2:Header 2}</th>
+            <th>${3:Header 3}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>${4:Row 1, Col 1}</td>
+            <td>${5:Row 1, Col 2}</td>
+            <td>${6:Row 1, Col 3}</td>
+        </tr>
+        ${0:<!-- Additional rows here -->}
+    </tbody>
+</table>
+endsnippet
+
+snippet ul-t "Unordered List"
+<ul>
+    <li>${1:Item 1}</li>
+    <li>${2:Item 2}</li>
+    <li>${3:Item 3}</li>
+</ul>
+endsnippet
+
+snippet form-t "Form Template"
+<form action="${1:/submit}" method="${2:post}">
+    <label for="${3:input}">${4:Label}</label>
+    <input type="${5:text}" id="${3}" name="${6:name}" ${7:required} />
+    <button type="submit">${8:Submit}</button>
+</form>
+endsnippet
+
+snippet nav-t "Navigation Bar"
+<nav class="${1:navbar}">
+    <ul class="${2:nav-list}">
+        <li class="${3:nav-item}"><a href="${4:#}" class="${5:nav-link}">${6:Home}</a></li>
+        <li class="${3:nav-item}"><a href="${7:#}" class="${5:nav-link}">${8:About}</a></li>
+        <li class="${3:nav-item}"><a href="${9:#}" class="${5:nav-link}">${10:Services}</a></li>
+        <li class="${3:nav-item}"><a href="${11:#}" class="${5:nav-link}">${12:Contact}</a></li>
+    </ul>
+</nav>
+endsnippet
+
+snippet divblock "Div Block"
+<div class="${1:container}">
+    ${0:<!-- Content goes here -->}
+</div>
+endsnippet
+
+snippet divnested "Nested Divs"
+<div class="${1:parent}">
+    <div class="${2:child}">:q
+        ${0:<!-- Content goes here -->}
+    </div>
+</div>
+endsnippet
+
