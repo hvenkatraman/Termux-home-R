@@ -6,7 +6,7 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 syntax on
-"colorscheme desert
+"colorscheme gruvbox
 "set background=dark
 
  " Turn on the Wild menu
@@ -193,10 +193,10 @@ nmap <leader>p :Prettier<CR>
 " autocmd! BufWritePre * LspDocumentFormatSync
 
 " Customize coc.nvim colors
-hi Pmenu guibg=#3c3836 guifg=#ebdbb2
-hi PmenuSel guibg=#504945 guifg=#fbf1c7
-hi PmenuSbar guibg=#3c3836
-hi PmenuThumb guibg=#504945
+" hi Pmenu guibg=#3c3836 guifg=#ebdbb2
+" hi PmenuSel guibg=#504945 guifg=#fbf1c7
+" hi PmenuSbar guibg=#3c3836
+" hi PmenuThumb guibg=#504945
 
 " Files
 nnoremap <silent> <leader>f :Files<CR>
@@ -208,3 +208,15 @@ nnoremap <silent> <leader>r :History<CR>
 nnoremap <silent> <leader>h :Helptags<CR>
 " Grep with Ag
 nnoremap <silent> <leader>g :Rg<CR>
+
+" Set the background color of the popup menu
+highlight Pmenu guibg=#282828 guifg=#ebdbb2 ctermfg=white ctermbg=black
+
+" Set the background color of the selected item in the popup menu
+highlight PmenuSel guibg=#458588 guifg=#1d2021 ctermfg=black ctermbg=cyan
+
+" Set the background color of the popup menu scrollbar
+highlight PmenuSbar guibg=#3c3836
+
+" Set the background color of the popup menu thumb
+highlight PmenuThumb guibg=#fabd2f
