@@ -220,3 +220,6 @@ highlight PmenuSbar guibg=#3c3836
 
 " Set the background color of the popup menu thumb
 highlight PmenuThumb guibg=#fabd2f
+
+" Set matching bracket color
+highlight MatchParen ctermfg=black ctermbg=Blue

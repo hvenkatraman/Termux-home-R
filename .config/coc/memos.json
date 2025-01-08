@@ -9,37 +9,37 @@
       "https://json.schemastore.org/ava.json": {
         "etag": "\"0d33f13698ada1:0\"",
         "fileName": "635f57185b22bce9d3a56c68f5da4ad7.schema.json",
-        "updateTime": 1735445512455
+        "updateTime": 1736209383724
       },
       "https://json.schemastore.org/semantic-release.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "fbc95702ba6eddb3e2de4f52e31ca82a.schema.json",
-        "updateTime": 1735445512456
+        "updateTime": 1736209383756
       },
       "https://json.schemastore.org/stylelintrc.json": {
         "etag": "\"8027545973adb1:0\"",
         "fileName": "000bfbdd14d2fb8ec5b0d59bec32ef98.schema.json",
-        "updateTime": 1735445512496
+        "updateTime": 1736209383761
       },
       "https://json.schemastore.org/jscpd.json": {
         "etag": "\"06c7f331a12db1:0\"",
         "fileName": "22bfc1ab1ff56aae62322f6ce45dab5a.schema.json",
-        "updateTime": 1735445512507
+        "updateTime": 1736209383758
       },
       "https://json.schemastore.org/eslintrc.json": {
         "etag": "\"805385dd39b8da1:0\"",
         "fileName": "c5064f140d4cfdbf4d6fbe68f68abbb1.schema.json",
-        "updateTime": 1735445512500
+        "updateTime": 1736209383759
       },
       "https://json.schemastore.org/prettierrc.json": {
         "etag": "\"079e10ba4ada1:0\"",
         "fileName": "ea5ab10330a3ab77dfd6d00a735b0925.schema.json",
-        "updateTime": 1735445512493
+        "updateTime": 1736209383757
       },
       "https://json.schemastore.org/partial-eslint-plugins.json": {
         "etag": "\"01dc33f55f4da1:0\"",
         "fileName": "fc7bb6e733b774ce47be6006f0b75b87.schema.json",
-        "updateTime": 1735445513953
+        "updateTime": 1736209385342
       }
     }
   }
