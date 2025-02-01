@@ -174,7 +174,12 @@ alias sqlite3w="cd /data/data/com.termux/files/home/learn/ldb/lsqlite3"
 
 
 # My easy localhost:8000 server using python for running 
+# Also we have installed live sever can be triggered by lsi
+# lsi"live-server --open=./index.html" //8080 localhost
 # running html files in termux
+
+alias lsindex="live-server --open=./index.html"
+alias lsapp="live-server --open=./app.html"
 
 alias pyserver='python -m http.server'
 

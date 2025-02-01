@@ -3,8 +3,9 @@
 		"typescript": false,
 		"eslint": true,
 		"tailwind": false,
-		"srcDir": false,
+		"srcDir": true,
 		"app": true,
-		"turbopack": false
+		"turbopack": false,
+		"importAlias": "@/*"
 	}
 }
